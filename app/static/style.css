@@ -1,0 +1,33 @@
+/* app/static/style.css */
+:root{
+  --cyber-blue:#007BFF;
+  --bg:#f7fbff;
+  --card:#ffffff;
+  --muted:#6b7280;
+}
+body{
+  font-family: Inter, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #e8f1ff 0%, #f7fbff 100%);
+  margin:0;padding:0;color:#0f172a;
+}
+.container{
+  max-width:800px;margin:40px auto;padding:24px;
+}
+header h1{color:var(--cyber-blue);margin:0;font-size:2rem;}
+header p{color:var(--muted);margin:6px 0 20px;}
+form{display:flex;gap:12px;margin-bottom:18px;}
+input[type="text"]{
+  flex:1;padding:12px 14px;border-radius:8px;border:1px solid #d1e3ff;
+  font-size:1rem;box-shadow:0 1px 2px rgba(2,6,23,0.04);
+}
+button{
+  background:var(--cyber-blue);color:#fff;border:none;padding:0 18px;border-radius:8px;
+  cursor:pointer;font-weight:600;height:44px;
+}
+.result-card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.06);margin-top:12px;}
+.result-card h2{margin:0 0 6px;}
+.result-card .phish{color:#c0392b;}
+.result-card .safe{color:#16a34a;}
+.alert.error{background:#fee2e2;color:#7f1d1d;padding:10px;border-radius:8px;margin-bottom:12px;}
+footer{color:var(--muted);margin-top:20px;font-size:0.9rem;text-align:center;}
+ul{padding-left:18px;}
