@@ -1,0 +1,47 @@
+<!-- app/templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PhishGuard — URL Phishing Detector</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PhishGuard 🔒</h1>
+      <p>Enter a URL to check whether it is legitimate or phishing.</p>
+    </header>
+
+    <main>
+      {% if error %}
+        <div class="alert error">{{ error }}</div>
+      {% endif %}
+      <form method="post" action="/predict">
+        <input type="text" name="url" placeholder="e.g., https://example.com/login" required>
+        <button type="submit">Check URL</button>
+      </form>
+
+      {% if result %}
+        <div class="result-card">
+          <h2>Result: <span class="{{ 'phish' if result.label=='Phishing' else 'safe' }}">{{ result.label }}</span></h2>
+          {% if result.probability %}
+            <p>Phishing probability: {{ (result.probability * 100) | round(2) }}%</p>
+          {% endif %}
+          <h3>Key features</h3>
+          <ul>
+            {% for k,v in result.features.items() %}
+              <li><strong>{{ k }}:</strong> {{ v }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </main>
+
+    <footer>
+      <p>PhishGuard • Real-time URL analysis • Lightweight • For demo & learning</p>
+    </footer>
+  </div>
+</body>
+</html>
