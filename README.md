@@ -10,16 +10,16 @@ Using Python and ML algorithms, the project analyzes patterns commonly found in 
 📁 Project Structure
 📦 Phishing-Website-Detector
 │
-├── 📂 dataset/                → Dataset used for training/testing
-├── 📂 src/
-│     ├── feature_extraction.py → Extracts URL features
-│     ├── model_training.py     → ML model training script
-│     ├── predict.py            → URL prediction script
+  ├── 📂 dataset/                → Dataset used for training/testing
+  ├── 📂 src/
+        │     ├── feature_extraction.py → Extracts URL features
+        │     ├── model_training.py     → ML model training script
+        │     ├── predict.py            → URL prediction script
 │
-├── 📂 web_app/
-│     ├── app.py                → Flask web application
-│     ├── templates/            → HTML templates for UI
-│     ├── static/               → CSS & JS files
+  ├── 📂 web_app/
+         │     ├── app.py                → Flask web application
+         │     ├── templates/            → HTML templates for UI
+         │     ├── static/               → CSS & JS files
 │
 ├── 📄 requirements.txt         → Dependencies
 ├── 📄 README.md                → Project documentation
