@@ -8,7 +8,7 @@ from joblib import dump
 import os
 from src.features.extract_features import extract_features
 
-DATA_PATH = "data/processed/dataset.csv"  # expected input CSV
+DATA_PATH = "phishing_url.csv"  # expected input CSV
 MODEL_DIR = "models"
 os.makedirs(MODEL_DIR, exist_ok=True)
 
