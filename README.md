@@ -28,29 +28,17 @@ Using Python and ML algorithms, the project analyzes patterns commonly found in 
 ⭐ Features
 
 🔍 Real-time URL analysis
-
 🧠 Machine Learning–based classification
-
 📊 Feature extraction from URL and domain properties
-
 🌐 Simple Flask web interface for predictions
-
 📁 Clean and modular code structure
-
 ⚡ Fast, lightweight & beginner-friendly
-
 🛠️ Technologies Used
-
 🐍 Python
-
 📦 Pandas / NumPy
-
 🤖 Scikit-Learn (ML Models)
-
 🔗 Regex for URL parsing
-
 🌐 Flask (Web App)
-
 📝 Jupyter Notebook (Model experiments)
 
 🚀 Getting Started
